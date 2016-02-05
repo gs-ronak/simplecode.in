@@ -1,0 +1,8 @@
+*.pyc
+*.pyo
+django_blog/settings/prod.py
+collectstatic
+.idea
+.DS_Store
+prod.py
+fabfile.py
