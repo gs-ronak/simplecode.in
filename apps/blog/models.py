@@ -27,7 +27,7 @@ class Blog(models.Model):
     category = models.ForeignKey('Category', verbose_name='category')
     tags = models.ManyToManyField('Tag', verbose_name='Label collection', null=True, blank=True)
     tags.help_text = ''
-    author = models.ForeignKey(User, verbose_name='作者')
+    author = models.ForeignKey(User, verbose_name='Author')
 
     def save(self, *args, **kwargs):
         self.link = slugify(self.link)

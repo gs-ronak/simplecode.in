@@ -14,7 +14,7 @@ from .forms import BlogForm
 @register.inclusion_tag('admin/blog/submit_line.html', takes_context=True)
 def submit_row(context):
     """
-        删除"保存后添加"按钮
+        Delete "Save Add" button
     """
     ctx = original_submit_row(context)
     ctx.update({
@@ -47,7 +47,7 @@ class BlogAdmin(admin.ModelAdmin):
     def create_time(self, obj):
         return obj.add_time.strftime('%Y-%m-%d')
 
-    create_time.short_description = "创建时间"
+    create_time.short_description = "Created"
 
     def publish(self, obj):
         if obj.publish_time:
@@ -55,7 +55,7 @@ class BlogAdmin(admin.ModelAdmin):
         else:
             return ''
 
-    publish.short_description = "发布时间"
+    publish.short_description = "Release Time"
 
     def make_published(self, request, queryset):
         """
@@ -71,10 +71,10 @@ class BlogAdmin(admin.ModelAdmin):
                 if entry.publish_time is None:
                     entry.publish_time = datetime.datetime.now()
                 entry.save()
-        message_bit = "%s 篇博客 " % rows_updated
-        self.message_user(request, "%s 成功发布" % message_bit)
+        message_bit = "%s Articles blog " % rows_updated
+        self.message_user(request, "%s Successfully posted" % message_bit)
 
-    make_published.short_description = "发表"
+    make_published.short_description = "Publication"
 
     def save_model(self, request, obj, form, change):
         obj.author = request.user
