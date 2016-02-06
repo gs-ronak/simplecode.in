@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 import datetime
 from django import forms
 
@@ -13,7 +10,6 @@ class BlogForm(forms.ModelForm):
     snippet = forms.CharField(label='Summary',
                               widget=forms.Textarea(attrs={'cols': 85, 'rows': 7}),
                               required=False)
-
     def save(self, commit=True):
         instance = super(BlogForm, self).save(commit=False)
         if instance.status == 'p' and instance.publish_time is None:
