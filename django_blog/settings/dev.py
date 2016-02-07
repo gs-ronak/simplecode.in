@@ -1,5 +1,7 @@
 from .base import *
 
+print('importing settings')
+
 DEBUG = True
 
 DATABASES = {
@@ -17,4 +19,4 @@ MIDDLEWARE_CLASSES += (
     'middleware.profile.ProfilerMiddleware',
 )
 
-PAGE_SIZE = 2
+PAGE_SIZE = 5
