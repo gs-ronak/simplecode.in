@@ -13,8 +13,8 @@ sitemaps = {
 
 urlpatterns = [
         url(r'^about$', views.about, name='about'),
-        url(r'^blog/', include('apps.blog.urls', namespace='blog')),
-        url(r'^$', include('apps.blog.urls', namespace='blog')),
+        # url(r'^blog/', include('apps.blog.urls', namespace='blog')),
+        url(r'^', include('apps.blog.urls', namespace='blog')),
         url(r'^wedding/', include('apps.wedding.urls', namespace='wedding')),
         url(r'^admin/', include(admin.site.urls)),
         url(r'404', views.not_found),

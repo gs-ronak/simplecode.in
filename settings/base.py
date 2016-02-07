@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'pagedown',
     'compressor',
 ]
+
 SITE_ID = 1
 MIDDLEWARE_CLASSES = (
 
@@ -64,7 +65,7 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'django_blog.urls'
 
 WSGI_APPLICATION = 'django_blog.wsgi.application'
 
