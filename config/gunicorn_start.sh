@@ -1,4 +1,4 @@
-NAME="foofish_app"
+NAME="ronak_blog"
 DJANGODIR=/home/django_blog
 SOCKFILE=/tmp/foofish.sock
 USER=root
