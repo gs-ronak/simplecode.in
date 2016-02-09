@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 
 # path.append(DJANGO_ROOT)
 
-print(BASE_DIR)
+#print(BASE_DIR)
 SECRET_KEY = 'xhcg42=d%md&1jcy$c8%#p5e+59!)25v$m$%uq*^1hfx%23i+p'
 DEBUG = True
 
@@ -95,8 +95,12 @@ WSGI_APPLICATION = 'django_blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'simplecode',
+	'USER':'root',
+	'PASSWORD': 'qwerty1234',
+	'HOST': 'localhost',
+	'PORT': ''
     }
 }
 

@@ -31,12 +31,12 @@ from os.path import abspath, dirname
 from sys import path
 
 SITE_ROOT = dirname(dirname(abspath(__file__)))
-print(SITE_ROOT)
-print(path)
+#print(SITE_ROOT)
+#print(path)
 
 path.append(SITE_ROOT)
 
-print(path)
+#print(path)
 # print('Project name ==> {{ project_name }}')
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_blog.settings.dev")
