@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 
 #print(BASE_DIR)
 SECRET_KEY = 'xhcg42=d%md&1jcy$c8%#p5e+59!)25v$m$%uq*^1hfx%23i+p'
-DEBUG = True
+DEBUG = False
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'collectstatic')
@@ -47,7 +47,7 @@ TEMPLATES = [
     },
 ]
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["simplecode.in", "www.simplecode.in", "52.77.18.35"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'apps.wedding',
     'pagedown',
     'compressor',
+    'ganalytics',
 ]
 
 SITE_ID = 1
@@ -111,3 +112,4 @@ LANGUAGE_CODE = 'en-us'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = False
+GANALYTICS_TRACKING_CODE = 'UA-73612812-1'

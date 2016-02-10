@@ -1,8 +1,8 @@
 from .base import *
 
-print('importing settings')
+#print('importing settings')
 
-DEBUG = True
+DEBUG = False
 
 #DATABASES = {
 #    'default': {
@@ -13,7 +13,7 @@ DEBUG = True
 
 #INSTALLED_APPS += ["debug_toolbar", ]
 
-ALLOWED_HOSTS = ['localhost', ]
+#ALLOWED_HOSTS = ['localhost', ]
 
 MIDDLEWARE_CLASSES += (
     'middleware.profile.ProfilerMiddleware',
