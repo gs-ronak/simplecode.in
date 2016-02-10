@@ -6,3 +6,5 @@ collectstatic
 .DS_Store
 prod.py
 fabfile.py
+django_blog/settings/base.py
+django_blog/settings/dev.py

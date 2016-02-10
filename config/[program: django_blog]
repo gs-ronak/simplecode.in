@@ -1,0 +1,6 @@
+[program: django_blog]
+directory = /home/ubuntu/websites/simplecode.in/config/
+user = ubuntu
+command = ./gunicorn_start.sh
+stdout_logfile = /home/ubuntu/supervisor/log/logfile.log
+stderr_logfile = /home/ubuntu/supervisor/log/error-logfile.log
