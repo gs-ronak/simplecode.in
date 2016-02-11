@@ -12,24 +12,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # BASE_DIR = os.path.dirname( os.path.dirname(os.path.abspath(__file__)))
 
 
-# ########## PATH CONFIGURATION
-# # Absolute filesystem path to the Django project directory:
-# DJANGO_ROOT = dirname(dirname(abspath(__file__)))
-
-# # Absolute filesystem path to the top-level project folder:
-# SITE_ROOT = dirname(DJANGO_ROOT)
-
-# # Site name:
-# SITE_NAME = basename(DJANGO_ROOT)
-
-# path.append(DJANGO_ROOT)
-
 #print(BASE_DIR)
 SECRET_KEY = 'xhcg42=d%md&1jcy$c8%#p5e+59!)25v$m$%uq*^1hfx%23i+p'
-DEBUG = False
+DEBUG = True
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'collectstatic')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = ''
 
 TEMPLATES = [
     {
@@ -47,7 +36,7 @@ TEMPLATES = [
     },
 ]
 
-ALLOWED_HOSTS = ["simplecode.in", "www.simplecode.in", "52.77.18.35"]
+ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -62,21 +51,17 @@ INSTALLED_APPS = [
     'apps.wedding',
     'pagedown',
     'compressor',
+    # 'analytical',
 ]
 
 SITE_ID = 1
 MIDDLEWARE_CLASSES = (
-
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
 )
 
 STATICFILES_FINDERS = (
@@ -94,12 +79,8 @@ WSGI_APPLICATION = 'django_blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'simplecode',
-	'USER':'root',
-	'PASSWORD': 'qwerty1234',
-	'HOST': 'localhost',
-	'PORT': ''
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 
