@@ -1,4 +1,5 @@
 #!encoding=utf-8
+from django.contrib.sites.models import Site
 from django.contrib.sitemaps import Sitemap
 from apps.blog.models import Blog
 
@@ -9,7 +10,7 @@ class BlogSitemap(Sitemap):
     location = ""
 
     def get_urls(self, site=None, **kwargs):
-        site = Site(domain='simplecode.in', name='simplecode.com')
+        site = Site(domain='www.simplecode.in', name='www.simplecode.com')
         return super(BlogSitemap, self).get_urls(site=site, **kwargs)
 
     def items(self):
