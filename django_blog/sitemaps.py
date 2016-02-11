@@ -6,6 +6,11 @@ from apps.blog.models import Blog
 class BlogSitemap(Sitemap):
     changefreq = "weekly"
     priority = 0.5
+    location = ""
+
+    def get_urls(self, site=None, **kwargs):
+        site = Site(domain='simplecode.in', name='simplecode.com')
+        return super(BlogSitemap, self).get_urls(site=site, **kwargs)
 
     def items(self):
         return Blog.objects.filter(is_public=True).filter(status='p')
