@@ -509,6 +509,8 @@ body.nav-opened .site-wrapper {
     background: #222 no-repeat center center;
     background-size: cover;
     overflow: hidden;
+    margin-top: -61px;
+    z-index: 1;
 }
 
 .main-header .inner {
@@ -2006,6 +2008,8 @@ body:not(.post-template) .post-title {
 }
 
 
+
+
 /* ==========================================================================
    13. Animations
    ========================================================================== */
@@ -2071,3 +2075,25 @@ body:not(.post-template) .post-title {
    End of file. Animations should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
    ========================================================================== */
+
+   /* Header */
+.header {
+    position:relative;
+    z-index:2;
+}
+/* Logo */
+.logo {
+    line-height:59px;
+}
+.logo a {
+    font-size:24px;
+    color:#fff;
+    font-weight:300;
+    text-transform:uppercase;
+}
+.logo a strong {
+    font-weight:700;
+}
+.header .navigation {
+    padding:20px 25px 0 0;
+}
