@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load google_analytics %}
 <html>
 <head>
 
@@ -33,10 +32,9 @@
         white-space: pre;
         }
     </style>
-
 </head>
-<body class="{% block body_class %}{% endblock %} nav-closed">
 
+<body class="{% block body_class %}{% endblock %} nav-closed">
 <div class="nav">
     <h3 class="nav-title">Menu</h3>
     <a href="#" class="nav-close">
@@ -71,6 +69,18 @@
 {% compress js %}
 <script type="text/javascript" src="{% static 'js/jquery.fitvids.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-73612812-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
 {% endcompress %}
 
 <!-- http://highlightjs.readthedocs.org/en/latest/css-classes-reference.html -->
@@ -79,7 +89,3 @@
 <script id="dsq-count-scr" src="//simplisticcode.disqus.com/count.js" async></script>
 </body>
 </html>
-
-
-
-

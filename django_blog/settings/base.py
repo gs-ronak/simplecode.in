@@ -62,7 +62,6 @@ INSTALLED_APPS = [
     'apps.wedding',
     'pagedown',
     'compressor',
-    'ganalytics',
 ]
 
 SITE_ID = 1
@@ -78,7 +77,6 @@ MIDDLEWARE_CLASSES = (
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
-    # os.
 )
 
 STATICFILES_FINDERS = (
@@ -112,4 +110,6 @@ LANGUAGE_CODE = 'en-us'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = False
-GANALYTICS_TRACKING_CODE = 'UA-73612812-1'
+
+GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-73612812-1'
+GOOGLE_ANALYTICS_SITE_SPEED = True
