@@ -2086,6 +2086,13 @@ body:not(.post-template) .post-title {
 .logo {
     line-height:59px;
 }
+
+
+.read-more:hover{
+    text-decoration: none;
+}
+
+
 .logo a {
     font-size:24px;
     color:#fff;
